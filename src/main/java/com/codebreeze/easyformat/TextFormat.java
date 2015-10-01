@@ -15,6 +15,34 @@ public class TextFormat {
     private static final char ESCAPE_CHAR = '\\';
     private static final char SEP_CHAR = '/';
 
+    public static String apply(final String messagePattern, final Object arg){
+        return format(messagePattern, arg);
+    }
+
+    public static String apply(final String messagePattern, final Object arg1, final Object arg2){
+        return format(messagePattern, arg1, arg2);
+    }
+
+    public static String apply(final String messagePattern, final Object arg1, final Object arg2, final Object arg3){
+        return format(messagePattern, arg1, arg2, arg3);
+    }
+
+    public static String apply(final String messagePattern,
+                               final Object arg1,
+                               final Object arg2,
+                               final Object arg3,
+                               final Object arg4){
+        return format(messagePattern, arg1, arg2, arg3, arg4);
+    }
+
+    public static String apply(final String messagePattern,
+                               final Object arg1,
+                               final Object arg2,
+                               final Object arg3,
+                               final Object arg4,
+                               final Object arg5){
+        return format(messagePattern, arg1, arg2, arg3, arg4, arg5);
+    }
 
     public static String format(final String messagePattern, final Object arg) {
         return arrayFormat(messagePattern, new Object[]{arg});
@@ -49,15 +77,11 @@ public class TextFormat {
     }
 
 
-    public static String arrayFormat(final String messageTemplate,
+    private static String arrayFormat(final String messageTemplate,
                                      final Object[] argArray) {
 
-        if (messageTemplate == null || messageTemplate.length() == 0 || messageTemplate.trim().length() == 0) {
+        if (emptyMessageTemplate(messageTemplate)) {
             return arrayFormat(repeatDelimiterStr(argArray.length), argArray);
-        }
-
-        if (argArray == null) {
-            return messageTemplate;
         }
 
         int i = 0;
@@ -87,13 +111,13 @@ public class TextFormat {
                         // itself escaped: "abc x:\\{}"
                         // we have to consume one backward slash
                         sb.append(messageTemplate.substring(i, j - 1));
-                        appendBasedOnTypeInformation(sb, argArray[L], new HashMap<Object[], Object>());
+                        appendBasedOnTypeInformation(sb, argArray[L], new HashMap<>());
                         i = j + 2;
                     }
                 } else {
                     // no escape, continue as usual
                     sb.append(messageTemplate.substring(i, j));
-                    appendBasedOnTypeInformation(sb, argArray[L], new HashMap<Object[], Object>());
+                    appendBasedOnTypeInformation(sb, argArray[L], new HashMap<>());
                     i = j + 2;
                 }
             }
@@ -104,6 +128,10 @@ public class TextFormat {
             sb.append(format(" -> WARNING: unused parameters: message pattern [{}], parameters{}", messageTemplate, argArray));
         }
         return sb.toString();
+    }
+
+    private static boolean emptyMessageTemplate(final String messageTemplate) {
+        return messageTemplate == null || messageTemplate.length() == 0 || messageTemplate.trim().length() == 0;
     }
 
     private static boolean noPlaceholders(final int i) {
