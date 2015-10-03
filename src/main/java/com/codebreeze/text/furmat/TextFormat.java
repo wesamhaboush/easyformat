@@ -1,4 +1,4 @@
-package com.codebreeze.easyformat;
+package com.codebreeze.text.furmat;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,6 +14,39 @@ public class TextFormat {
     private static final String DELIM_STR = "{}";
     private static final char ESCAPE_CHAR = '\\';
     private static final char SEP_CHAR = '/';
+
+    public static String textFormat(final String messagePattern, final Object arg){
+        return format(messagePattern, arg);
+    }
+
+    public static String textFormat(final String messagePattern, final Object arg1, final Object arg2){
+        return format(messagePattern, arg1, arg2);
+    }
+
+    public static String textFormat(final String messagePattern, final Object arg1, final Object arg2, final Object arg3){
+        return format(messagePattern, arg1, arg2, arg3);
+    }
+
+    public static String textFormat(final String messagePattern,
+                               final Object arg1,
+                               final Object arg2,
+                               final Object arg3,
+                               final Object arg4){
+        return format(messagePattern, arg1, arg2, arg3, arg4);
+    }
+
+    public static String textFormat(final String messagePattern,
+                               final Object arg1,
+                               final Object arg2,
+                               final Object arg3,
+                               final Object arg4,
+                               final Object arg5){
+        return format(messagePattern, arg1, arg2, arg3, arg4, arg5);
+    }
+
+    public static String format(final String messagePattern, final Object arg) {
+        return arrayFormat(messagePattern, new Object[]{arg});
+    }
 
     public static String apply(final String messagePattern, final Object arg){
         return format(messagePattern, arg);
@@ -42,10 +75,6 @@ public class TextFormat {
                                final Object arg4,
                                final Object arg5){
         return format(messagePattern, arg1, arg2, arg3, arg4, arg5);
-    }
-
-    public static String format(final String messagePattern, final Object arg) {
-        return arrayFormat(messagePattern, new Object[]{arg});
     }
 
     public static String format(final String messagePattern, final Object arg1, final Object arg2) {

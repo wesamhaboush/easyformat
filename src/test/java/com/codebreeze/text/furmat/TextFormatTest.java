@@ -1,4 +1,4 @@
-package com.codebreeze.easyformat;
+package com.codebreeze.text.furmat;
 
 import org.junit.Test;
 
@@ -16,6 +16,16 @@ public class TextFormatTest {
         assertThat(TextFormat.apply("{}-{}-{}", 1, false, 1.0), equalTo("1-false-1.0"));
         assertThat(TextFormat.apply("{}-{}-{}-{}", 1, false, 1.0, "string"), equalTo("1-false-1.0-string"));
         assertThat(TextFormat.apply("{}-{}-{}-{}-{}", 1, false, 1.0, "string", '?'), equalTo("1-false-1.0-string-?"));
+    }
+
+    @Test
+    public void ensure_text_formatted_method_works_as_apply(){
+        assertThat(TextFormat.format("{}", false), equalTo("false"));
+        assertThat(TextFormat.textFormat("{}", 1), equalTo("1"));
+        assertThat(TextFormat.textFormat("{}-{}", 1, false), equalTo("1-false"));
+        assertThat(TextFormat.textFormat("{}-{}-{}", 1, false, 1.0), equalTo("1-false-1.0"));
+        assertThat(TextFormat.textFormat("{}-{}-{}-{}", 1, false, 1.0, "string"), equalTo("1-false-1.0-string"));
+        assertThat(TextFormat.textFormat("{}-{}-{}-{}-{}", 1, false, 1.0, "string", '?'), equalTo("1-false-1.0-string-?"));
     }
 
     @Test
