@@ -1,0 +1,373 @@
+# JMH 1.11 (released 23 days ago)
+# VM version: JDK 1.8.0_60, VM 25.60-b23
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Dperformance=true
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.codebreeze.serialization.FormattingPerformanceTest.Furmat
+
+Forking 3 times using command: [/usr/lib/jvm/java-8-oracle/jre/bin/java, -Dperformance=true, -XX:CompileCommandFile=/tmp/jmh3543320719107697660compilecommand, -cp, target/furmat-perf-test-1.0-SNAPSHOT-shaded-tests.jar:target/furmat-perf-test-1.0-SNAPSHOT.jar:target/furmat-perf-test.jar, org.openjdk.jmh.runner.ForkedMain, 127.0.0.1, 51208]
+# Run progress: 0.00% complete, ETA 00:02:30
+# Fork: 1 of 3
+# Warmup Iteration   1: MessageFormat.format no types: I met iHw1zFy3tqwWGUdMj3BN 4 times, last on 10/4/15 7:50 PM. I think she weighs 72.338 kilos.
+MessageFormat.format with types: I met iHw1zFy3tqwWGUdMj3BN 4 times, last on Oct 4, 2015. I think she weighs 72.338 kilos.
+String.format no types: I met iHw1zFy3tqwWGUdMj3BN 4 times, last on Sun Oct 04 19:50:39 PDT 2015. I think she weighs 72.33835162647343 kilos.
+String.format with types: I met iHw1zFy3tqwWGUdMj3BN 4 times, last on 10/04/15. I think she weighs 72.338352 kilos.
+furmat: I met iHw1zFy3tqwWGUdMj3BN 4 times, last on Sun Oct 04 19:50:39 PDT 2015. I think she weighs 72.33835162647343 kilos.
+730737.130 ops/s
+# Warmup Iteration   2: 865335.256 ops/s
+# Warmup Iteration   3: 930481.299 ops/s
+# Warmup Iteration   4: 1017453.333 ops/s
+# Warmup Iteration   5: 1002721.201 ops/s
+Iteration   1: 993320.626 ops/s
+Iteration   2: 868816.653 ops/s
+Iteration   3: 766777.344 ops/s
+Iteration   4: 694772.576 ops/s
+Iteration   5: 837011.503 ops/s
+
+# Run progress: 6.67% complete, ETA 00:02:27
+# Fork: 2 of 3
+# Warmup Iteration   1: MessageFormat.format no types: I met QvnFlKistgj4zGus7bvl 3 times, last on 10/4/15 7:50 PM. I think she weighs 56.23 kilos.
+MessageFormat.format with types: I met QvnFlKistgj4zGus7bvl 3 times, last on Oct 4, 2015. I think she weighs 56.23 kilos.
+String.format no types: I met QvnFlKistgj4zGus7bvl 3 times, last on Sun Oct 04 19:50:50 PDT 2015. I think she weighs 56.230408070425746 kilos.
+String.format with types: I met QvnFlKistgj4zGus7bvl 3 times, last on 10/04/15. I think she weighs 56.230408 kilos.
+furmat: I met QvnFlKistgj4zGus7bvl 3 times, last on Sun Oct 04 19:50:50 PDT 2015. I think she weighs 56.230408070425746 kilos.
+483761.542 ops/s
+# Warmup Iteration   2: 714020.794 ops/s
+# Warmup Iteration   3: 850523.808 ops/s
+# Warmup Iteration   4: 729337.328 ops/s
+# Warmup Iteration   5: 824201.049 ops/s
+Iteration   1: 824507.834 ops/s
+Iteration   2: 838653.372 ops/s
+Iteration   3: 820109.490 ops/s
+Iteration   4: 827134.426 ops/s
+Iteration   5: 675073.351 ops/s
+
+# Run progress: 13.33% complete, ETA 00:02:16
+# Fork: 3 of 3
+# Warmup Iteration   1: MessageFormat.format no types: I met TOdAVgOzMrIrxA5bFnsF 8 times, last on 10/4/15 7:51 PM. I think she weighs 52.926 kilos.
+MessageFormat.format with types: I met TOdAVgOzMrIrxA5bFnsF 8 times, last on Oct 4, 2015. I think she weighs 52.926 kilos.
+String.format no types: I met TOdAVgOzMrIrxA5bFnsF 8 times, last on Sun Oct 04 19:51:01 PDT 2015. I think she weighs 52.92563516303553 kilos.
+String.format with types: I met TOdAVgOzMrIrxA5bFnsF 8 times, last on 10/04/15. I think she weighs 52.925635 kilos.
+furmat: I met TOdAVgOzMrIrxA5bFnsF 8 times, last on Sun Oct 04 19:51:01 PDT 2015. I think she weighs 52.92563516303553 kilos.
+403846.079 ops/s
+# Warmup Iteration   2: 578951.423 ops/s
+# Warmup Iteration   3: 708691.383 ops/s
+# Warmup Iteration   4: 859740.801 ops/s
+# Warmup Iteration   5: 854472.092 ops/s
+Iteration   1: 867284.087 ops/s
+Iteration   2: 855192.713 ops/s
+Iteration   3: 759844.365 ops/s
+Iteration   4: 826543.040 ops/s
+Iteration   5: 845720.307 ops/s
+
+
+Result "Furmat":
+  820050.779 ±(99.9%) 81038.993 ops/s [Average]
+  (min, avg, max) = (675073.351, 820050.779, 993320.626), stdev = 75803.924
+  CI (99.9%): [739011.786, 901089.772] (assumes normal distribution)
+
+
+# JMH 1.11 (released 23 days ago)
+# VM version: JDK 1.8.0_60, VM 25.60-b23
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Dperformance=true
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.codebreeze.serialization.FormattingPerformanceTest.MessageFormatNoTypes
+
+Forking 3 times using command: [/usr/lib/jvm/java-8-oracle/jre/bin/java, -Dperformance=true, -XX:CompileCommandFile=/tmp/jmh3543320719107697660compilecommand, -cp, target/furmat-perf-test-1.0-SNAPSHOT-shaded-tests.jar:target/furmat-perf-test-1.0-SNAPSHOT.jar:target/furmat-perf-test.jar, org.openjdk.jmh.runner.ForkedMain, 127.0.0.1, 54789]
+# Run progress: 20.00% complete, ETA 00:02:06
+# Fork: 1 of 3
+# Warmup Iteration   1: MessageFormat.format no types: I met FeX0EkpMXKUAdLMk03IB 8 times, last on 10/4/15 7:51 PM. I think she weighs 73.498 kilos.
+MessageFormat.format with types: I met FeX0EkpMXKUAdLMk03IB 8 times, last on Oct 4, 2015. I think she weighs 73.498 kilos.
+String.format no types: I met FeX0EkpMXKUAdLMk03IB 8 times, last on Sun Oct 04 19:51:11 PDT 2015. I think she weighs 73.49819072521885 kilos.
+String.format with types: I met FeX0EkpMXKUAdLMk03IB 8 times, last on 10/04/15. I think she weighs 73.498191 kilos.
+furmat: I met FeX0EkpMXKUAdLMk03IB 8 times, last on Sun Oct 04 19:51:11 PDT 2015. I think she weighs 73.49819072521885 kilos.
+9495.059 ops/s
+# Warmup Iteration   2: 28792.071 ops/s
+# Warmup Iteration   3: 69102.957 ops/s
+# Warmup Iteration   4: 61272.751 ops/s
+# Warmup Iteration   5: 95585.305 ops/s
+Iteration   1: 97839.174 ops/s
+Iteration   2: 68834.308 ops/s
+Iteration   3: 94645.329 ops/s
+Iteration   4: 96420.738 ops/s
+Iteration   5: 75145.166 ops/s
+
+# Run progress: 26.67% complete, ETA 00:01:56
+# Fork: 2 of 3
+# Warmup Iteration   1: MessageFormat.format no types: I met DwYRHw1QDnmaXAfzmUvj 14 times, last on 10/4/15 7:51 PM. I think she weighs 51.992 kilos.
+MessageFormat.format with types: I met DwYRHw1QDnmaXAfzmUvj 14 times, last on Oct 4, 2015. I think she weighs 51.992 kilos.
+String.format no types: I met DwYRHw1QDnmaXAfzmUvj 14 times, last on Sun Oct 04 19:51:22 PDT 2015. I think she weighs 51.99183830390828 kilos.
+String.format with types: I met DwYRHw1QDnmaXAfzmUvj 14 times, last on 10/04/15. I think she weighs 51.991838 kilos.
+furmat: I met DwYRHw1QDnmaXAfzmUvj 14 times, last on Sun Oct 04 19:51:22 PDT 2015. I think she weighs 51.99183830390828 kilos.
+16345.321 ops/s
+# Warmup Iteration   2: 37236.672 ops/s
+# Warmup Iteration   3: 58293.404 ops/s
+# Warmup Iteration   4: 81772.091 ops/s
+# Warmup Iteration   5: 93344.030 ops/s
+Iteration   1: 101171.403 ops/s
+Iteration   2: 100585.323 ops/s
+Iteration   3: 100979.315 ops/s
+Iteration   4: 94256.887 ops/s
+Iteration   5: 102326.480 ops/s
+
+# Run progress: 33.33% complete, ETA 00:01:45
+# Fork: 3 of 3
+# Warmup Iteration   1: MessageFormat.format no types: I met Wu7W7dd8QNtgOcqsDhSl 11 times, last on 10/4/15 7:51 PM. I think she weighs 78.573 kilos.
+MessageFormat.format with types: I met Wu7W7dd8QNtgOcqsDhSl 11 times, last on Oct 4, 2015. I think she weighs 78.573 kilos.
+String.format no types: I met Wu7W7dd8QNtgOcqsDhSl 11 times, last on Sun Oct 04 19:51:32 PDT 2015. I think she weighs 78.572711442556 kilos.
+String.format with types: I met Wu7W7dd8QNtgOcqsDhSl 11 times, last on 10/04/15. I think she weighs 78.572711 kilos.
+furmat: I met Wu7W7dd8QNtgOcqsDhSl 11 times, last on Sun Oct 04 19:51:32 PDT 2015. I think she weighs 78.572711442556 kilos.
+8268.091 ops/s
+# Warmup Iteration   2: 40697.875 ops/s
+# Warmup Iteration   3: 70514.130 ops/s
+# Warmup Iteration   4: 61894.205 ops/s
+# Warmup Iteration   5: 95617.316 ops/s
+Iteration   1: 103428.963 ops/s
+Iteration   2: 94933.014 ops/s
+Iteration   3: 103030.418 ops/s
+Iteration   4: 103781.730 ops/s
+Iteration   5: 105118.870 ops/s
+
+
+Result "MessageFormatNoTypes":
+  96166.474 ±(99.9%) 11223.198 ops/s [Average]
+  (min, avg, max) = (68834.308, 96166.474, 105118.870), stdev = 10498.186
+  CI (99.9%): [84943.277, 107389.672] (assumes normal distribution)
+
+
+# JMH 1.11 (released 23 days ago)
+# VM version: JDK 1.8.0_60, VM 25.60-b23
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Dperformance=true
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.codebreeze.serialization.FormattingPerformanceTest.MessageFormatWithTypes
+
+Forking 3 times using command: [/usr/lib/jvm/java-8-oracle/jre/bin/java, -Dperformance=true, -XX:CompileCommandFile=/tmp/jmh3543320719107697660compilecommand, -cp, target/furmat-perf-test-1.0-SNAPSHOT-shaded-tests.jar:target/furmat-perf-test-1.0-SNAPSHOT.jar:target/furmat-perf-test.jar, org.openjdk.jmh.runner.ForkedMain, 127.0.0.1, 49868]
+# Run progress: 40.00% complete, ETA 00:01:34
+# Fork: 1 of 3
+# Warmup Iteration   1: MessageFormat.format no types: I met 4lGkY3yRSsJNHp87JGhO 14 times, last on 10/4/15 7:51 PM. I think she weighs 78.962 kilos.
+MessageFormat.format with types: I met 4lGkY3yRSsJNHp87JGhO 14 times, last on Oct 4, 2015. I think she weighs 78.962 kilos.
+String.format no types: I met 4lGkY3yRSsJNHp87JGhO 14 times, last on Sun Oct 04 19:51:43 PDT 2015. I think she weighs 78.961641075212 kilos.
+String.format with types: I met 4lGkY3yRSsJNHp87JGhO 14 times, last on 10/04/15. I think she weighs 78.961641 kilos.
+furmat: I met 4lGkY3yRSsJNHp87JGhO 14 times, last on Sun Oct 04 19:51:43 PDT 2015. I think she weighs 78.961641075212 kilos.
+17003.716 ops/s
+# Warmup Iteration   2: 29691.255 ops/s
+# Warmup Iteration   3: 70982.988 ops/s
+# Warmup Iteration   4: 91116.429 ops/s
+# Warmup Iteration   5: 82204.207 ops/s
+Iteration   1: 104606.919 ops/s
+Iteration   2: 105081.763 ops/s
+Iteration   3: 106346.406 ops/s
+Iteration   4: 103229.876 ops/s
+Iteration   5: 107375.787 ops/s
+
+# Run progress: 46.67% complete, ETA 00:01:24
+# Fork: 2 of 3
+# Warmup Iteration   1: MessageFormat.format no types: I met pwv97MMZseBxwfoDVapn 8 times, last on 10/4/15 7:51 PM. I think she weighs 55.478 kilos.
+MessageFormat.format with types: I met pwv97MMZseBxwfoDVapn 8 times, last on Oct 4, 2015. I think she weighs 55.478 kilos.
+String.format no types: I met pwv97MMZseBxwfoDVapn 8 times, last on Sun Oct 04 19:51:53 PDT 2015. I think she weighs 55.47825225162172 kilos.
+String.format with types: I met pwv97MMZseBxwfoDVapn 8 times, last on 10/04/15. I think she weighs 55.478252 kilos.
+furmat: I met pwv97MMZseBxwfoDVapn 8 times, last on Sun Oct 04 19:51:53 PDT 2015. I think she weighs 55.47825225162172 kilos.
+12784.906 ops/s
+# Warmup Iteration   2: 22320.382 ops/s
+# Warmup Iteration   3: 39511.733 ops/s
+# Warmup Iteration   4: 69217.421 ops/s
+# Warmup Iteration   5: 90654.533 ops/s
+Iteration   1: 93274.743 ops/s
+Iteration   2: 84306.112 ops/s
+Iteration   3: 100813.164 ops/s
+Iteration   4: 100241.089 ops/s
+Iteration   5: 97965.046 ops/s
+
+# Run progress: 53.33% complete, ETA 00:01:13
+# Fork: 3 of 3
+# Warmup Iteration   1: MessageFormat.format no types: I met yo123yHG0cUXVKicWg45 6 times, last on 10/4/15 7:52 PM. I think she weighs 60.202 kilos.
+MessageFormat.format with types: I met yo123yHG0cUXVKicWg45 6 times, last on Oct 4, 2015. I think she weighs 60.202 kilos.
+String.format no types: I met yo123yHG0cUXVKicWg45 6 times, last on Sun Oct 04 19:52:04 PDT 2015. I think she weighs 60.201679669449035 kilos.
+String.format with types: I met yo123yHG0cUXVKicWg45 6 times, last on 10/04/15. I think she weighs 60.201680 kilos.
+furmat: I met yo123yHG0cUXVKicWg45 6 times, last on Sun Oct 04 19:52:04 PDT 2015. I think she weighs 60.201679669449035 kilos.
+12557.650 ops/s
+# Warmup Iteration   2: 18837.884 ops/s
+# Warmup Iteration   3: 64174.578 ops/s
+# Warmup Iteration   4: 81578.798 ops/s
+# Warmup Iteration   5: 88030.413 ops/s
+Iteration   1: 100782.086 ops/s
+Iteration   2: 100984.449 ops/s
+Iteration   3: 84700.221 ops/s
+Iteration   4: 98190.223 ops/s
+Iteration   5: 100603.870 ops/s
+
+
+Result "MessageFormatWithTypes":
+  99233.450 ±(99.9%) 7445.348 ops/s [Average]
+  (min, avg, max) = (84306.112, 99233.450, 107375.787), stdev = 6964.383
+  CI (99.9%): [91788.102, 106678.798] (assumes normal distribution)
+
+
+# JMH 1.11 (released 23 days ago)
+# VM version: JDK 1.8.0_60, VM 25.60-b23
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Dperformance=true
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.codebreeze.serialization.FormattingPerformanceTest.StringFormatNoTypes
+
+Forking 3 times using command: [/usr/lib/jvm/java-8-oracle/jre/bin/java, -Dperformance=true, -XX:CompileCommandFile=/tmp/jmh3543320719107697660compilecommand, -cp, target/furmat-perf-test-1.0-SNAPSHOT-shaded-tests.jar:target/furmat-perf-test-1.0-SNAPSHOT.jar:target/furmat-perf-test.jar, org.openjdk.jmh.runner.ForkedMain, 127.0.0.1, 42649]
+# Run progress: 60.00% complete, ETA 00:01:03
+# Fork: 1 of 3
+# Warmup Iteration   1: MessageFormat.format no types: I met lfe7T2IWtG14hJyRR16z 7 times, last on 10/4/15 7:52 PM. I think she weighs 67.216 kilos.
+MessageFormat.format with types: I met lfe7T2IWtG14hJyRR16z 7 times, last on Oct 4, 2015. I think she weighs 67.216 kilos.
+String.format no types: I met lfe7T2IWtG14hJyRR16z 7 times, last on Sun Oct 04 19:52:15 PDT 2015. I think she weighs 67.21631743316033 kilos.
+String.format with types: I met lfe7T2IWtG14hJyRR16z 7 times, last on 10/04/15. I think she weighs 67.216317 kilos.
+furmat: I met lfe7T2IWtG14hJyRR16z 7 times, last on Sun Oct 04 19:52:15 PDT 2015. I think she weighs 67.21631743316033 kilos.
+110476.018 ops/s
+# Warmup Iteration   2: 86652.776 ops/s
+# Warmup Iteration   3: 131796.373 ops/s
+# Warmup Iteration   4: 259759.027 ops/s
+# Warmup Iteration   5: 257249.386 ops/s
+Iteration   1: 252692.451 ops/s
+Iteration   2: 277836.317 ops/s
+Iteration   3: 285306.536 ops/s
+Iteration   4: 280228.808 ops/s
+Iteration   5: 272277.286 ops/s
+
+# Run progress: 66.67% complete, ETA 00:00:53
+# Fork: 2 of 3
+# Warmup Iteration   1: MessageFormat.format no types: I met l6WXR7URWaFQzai0BzXA 7 times, last on 10/4/15 7:52 PM. I think she weighs 79.46 kilos.
+MessageFormat.format with types: I met l6WXR7URWaFQzai0BzXA 7 times, last on Oct 4, 2015. I think she weighs 79.46 kilos.
+String.format no types: I met l6WXR7URWaFQzai0BzXA 7 times, last on Sun Oct 04 19:52:25 PDT 2015. I think she weighs 79.45980564732574 kilos.
+String.format with types: I met l6WXR7URWaFQzai0BzXA 7 times, last on 10/04/15. I think she weighs 79.459806 kilos.
+furmat: I met l6WXR7URWaFQzai0BzXA 7 times, last on Sun Oct 04 19:52:25 PDT 2015. I think she weighs 79.45980564732574 kilos.
+90330.358 ops/s
+# Warmup Iteration   2: 79605.823 ops/s
+# Warmup Iteration   3: 172670.433 ops/s
+# Warmup Iteration   4: 264885.177 ops/s
+# Warmup Iteration   5: 216392.678 ops/s
+Iteration   1: 280523.680 ops/s
+Iteration   2: 245167.510 ops/s
+Iteration   3: 209457.999 ops/s
+Iteration   4: 272956.767 ops/s
+Iteration   5: 250878.672 ops/s
+
+# Run progress: 73.33% complete, ETA 00:00:42
+# Fork: 3 of 3
+# Warmup Iteration   1: MessageFormat.format no types: I met h2BrtCIIBktnr5oJ1vud 12 times, last on 10/4/15 7:52 PM. I think she weighs 76.455 kilos.
+MessageFormat.format with types: I met h2BrtCIIBktnr5oJ1vud 12 times, last on Oct 4, 2015. I think she weighs 76.455 kilos.
+String.format no types: I met h2BrtCIIBktnr5oJ1vud 12 times, last on Sun Oct 04 19:52:36 PDT 2015. I think she weighs 76.4547684798021 kilos.
+String.format with types: I met h2BrtCIIBktnr5oJ1vud 12 times, last on 10/04/15. I think she weighs 76.454768 kilos.
+furmat: I met h2BrtCIIBktnr5oJ1vud 12 times, last on Sun Oct 04 19:52:36 PDT 2015. I think she weighs 76.4547684798021 kilos.
+118947.564 ops/s
+# Warmup Iteration   2: 268836.256 ops/s
+# Warmup Iteration   3: 280080.691 ops/s
+# Warmup Iteration   4: 319660.810 ops/s
+# Warmup Iteration   5: 332194.974 ops/s
+Iteration   1: 313821.457 ops/s
+Iteration   2: 310196.508 ops/s
+Iteration   3: 332432.071 ops/s
+Iteration   4: 241507.691 ops/s
+Iteration   5: 323907.049 ops/s
+
+
+Result "StringFormatNoTypes":
+  276612.720 ±(99.9%) 36104.539 ops/s [Average]
+  (min, avg, max) = (209457.999, 276612.720, 332432.071), stdev = 33772.209
+  CI (99.9%): [240508.181, 312717.260] (assumes normal distribution)
+
+
+# JMH 1.11 (released 23 days ago)
+# VM version: JDK 1.8.0_60, VM 25.60-b23
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Dperformance=true
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.codebreeze.serialization.FormattingPerformanceTest.StringFormatWithTypes
+
+Forking 3 times using command: [/usr/lib/jvm/java-8-oracle/jre/bin/java, -Dperformance=true, -XX:CompileCommandFile=/tmp/jmh3543320719107697660compilecommand, -cp, target/furmat-perf-test-1.0-SNAPSHOT-shaded-tests.jar:target/furmat-perf-test-1.0-SNAPSHOT.jar:target/furmat-perf-test.jar, org.openjdk.jmh.runner.ForkedMain, 127.0.0.1, 58921]
+# Run progress: 80.00% complete, ETA 00:00:31
+# Fork: 1 of 3
+# Warmup Iteration   1: MessageFormat.format no types: I met hHNr9RIH0vcT3qMMrfGF 8 times, last on 10/4/15 7:52 PM. I think she weighs 72.815 kilos.
+MessageFormat.format with types: I met hHNr9RIH0vcT3qMMrfGF 8 times, last on Oct 4, 2015. I think she weighs 72.815 kilos.
+String.format no types: I met hHNr9RIH0vcT3qMMrfGF 8 times, last on Sun Oct 04 19:52:47 PDT 2015. I think she weighs 72.81477147791091 kilos.
+String.format with types: I met hHNr9RIH0vcT3qMMrfGF 8 times, last on 10/04/15. I think she weighs 72.814771 kilos.
+furmat: I met hHNr9RIH0vcT3qMMrfGF 8 times, last on Sun Oct 04 19:52:47 PDT 2015. I think she weighs 72.81477147791091 kilos.
+31390.909 ops/s
+# Warmup Iteration   2: 42123.945 ops/s
+# Warmup Iteration   3: 91095.467 ops/s
+# Warmup Iteration   4: 152251.100 ops/s
+# Warmup Iteration   5: 178402.985 ops/s
+Iteration   1: 200459.860 ops/s
+Iteration   2: 166501.010 ops/s
+Iteration   3: 167096.371 ops/s
+Iteration   4: 208564.307 ops/s
+Iteration   5: 202174.777 ops/s
+
+# Run progress: 86.67% complete, ETA 00:00:21
+# Fork: 2 of 3
+# Warmup Iteration   1: MessageFormat.format no types: I met d7PszJKfnsDLNJ1Tayrm 5 times, last on 10/4/15 7:52 PM. I think she weighs 52.177 kilos.
+MessageFormat.format with types: I met d7PszJKfnsDLNJ1Tayrm 5 times, last on Oct 4, 2015. I think she weighs 52.177 kilos.
+String.format no types: I met d7PszJKfnsDLNJ1Tayrm 5 times, last on Sun Oct 04 19:52:57 PDT 2015. I think she weighs 52.176517548433196 kilos.
+String.format with types: I met d7PszJKfnsDLNJ1Tayrm 5 times, last on 10/04/15. I think she weighs 52.176518 kilos.
+furmat: I met d7PszJKfnsDLNJ1Tayrm 5 times, last on Sun Oct 04 19:52:57 PDT 2015. I think she weighs 52.176517548433196 kilos.
+37294.010 ops/s
+# Warmup Iteration   2: 173738.081 ops/s
+# Warmup Iteration   3: 165192.413 ops/s
+# Warmup Iteration   4: 182728.548 ops/s
+# Warmup Iteration   5: 204066.542 ops/s
+Iteration   1: 202013.388 ops/s
+Iteration   2: 197365.964 ops/s
+Iteration   3: 201107.238 ops/s
+Iteration   4: 129545.906 ops/s
+Iteration   5: 204039.970 ops/s
+
+# Run progress: 93.33% complete, ETA 00:00:10
+# Fork: 3 of 3
+# Warmup Iteration   1: MessageFormat.format no types: I met LCuiPfuGaioeedbTkQAP 5 times, last on 10/4/15 7:53 PM. I think she weighs 65.841 kilos.
+MessageFormat.format with types: I met LCuiPfuGaioeedbTkQAP 5 times, last on Oct 4, 2015. I think she weighs 65.841 kilos.
+String.format no types: I met LCuiPfuGaioeedbTkQAP 5 times, last on Sun Oct 04 19:53:08 PDT 2015. I think she weighs 65.84141631574742 kilos.
+String.format with types: I met LCuiPfuGaioeedbTkQAP 5 times, last on 10/04/15. I think she weighs 65.841416 kilos.
+furmat: I met LCuiPfuGaioeedbTkQAP 5 times, last on Sun Oct 04 19:53:08 PDT 2015. I think she weighs 65.84141631574742 kilos.
+34644.350 ops/s
+# Warmup Iteration   2: 63355.178 ops/s
+# Warmup Iteration   3: 64580.479 ops/s
+# Warmup Iteration   4: 188193.415 ops/s
+# Warmup Iteration   5: 194373.758 ops/s
+Iteration   1: 224643.655 ops/s
+Iteration   2: 221705.530 ops/s
+Iteration   3: 217914.919 ops/s
+Iteration   4: 222767.139 ops/s
+Iteration   5: 167589.769 ops/s
+
+
+Result "StringFormatWithTypes":
+  195565.987 ±(99.9%) 28498.439 ops/s [Average]
+  (min, avg, max) = (129545.906, 195565.987, 224643.655), stdev = 26657.458
+  CI (99.9%): [167067.548, 224064.426] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:02:38
+
+Benchmark                                          Mode  Cnt       Score       Error  Units
+FormattingPerformanceTest.Furmat                  thrpt   15  820050.779 ± 81038.993  ops/s
+FormattingPerformanceTest.MessageFormatNoTypes    thrpt   15   96166.474 ± 11223.198  ops/s
+FormattingPerformanceTest.MessageFormatWithTypes  thrpt   15   99233.450 ±  7445.348  ops/s
+FormattingPerformanceTest.StringFormatNoTypes     thrpt   15  276612.720 ± 36104.539  ops/s
+FormattingPerformanceTest.StringFormatWithTypes   thrpt   15  195565.987 ± 28498.439  ops/s

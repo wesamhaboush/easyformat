@@ -1,0 +1,3 @@
+#!/bin/bash -x
+
+java -Dperformance=true -cp "target/*" org.openjdk.jmh.Main -v EXTRA ".*"
