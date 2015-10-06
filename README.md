@@ -1,17 +1,17 @@
 # Introduction
 
 Have you ever wanted to simply format a string and had to type:
-
+```java
 	final String msg = String.format("%s, %s, %d", a, b, c);
-
+```
 or
-
+```java
 	final String msg = MessageFormat.format("{0}, {1}, {2}", a, b, c);
-
+```
 I personally prefer the slf4j style of formatting, i.e. the simple '{}' placeholder. So I decided to create this little library.
 
 # Examples:
-
+```java
 		final String sport = "football";
 		final String msg = TextFormat.apply("I love {}", sport);
 		System.out.println(msg); 
@@ -28,7 +28,7 @@ I personally prefer the slf4j style of formatting, i.e. the simple '{}' placehol
 		final String msg = TextFormat.apply("I loved {} for {} respectively", sport, howManyYears);
 		System.out.println(msg); 
 		// will print I loved [football, volleyball, basketball] for [5, 2, 7] years respectively
-		
+```
 # Performance
 
 The library is much faster than MessageFormat and String.format as per tests committed in the project. Here are the results:
